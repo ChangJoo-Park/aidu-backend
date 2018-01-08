@@ -1,0 +1,26 @@
+{
+  "name": "aidu-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@now-ims/hapi-now-auth": "^1.0.1",
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "boom": "^7.1.1",
+    "hapi": "^17.2.0",
+    "hapi-auth-jwt2": "salzhrani/hapi-auth-jwt2#v-17",
+    "hapi-io": "^0.2.1",
+    "joi": "^13.0.2",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^5.0.0-rc0",
+    "socket.io": "^2.0.4"
+  }
+}
