@@ -230,8 +230,25 @@ const storeInvitation = {
   }
 }
 
+const destroyInvitation = {
+  method: 'DELETE',
+  path: '/teams/{teamId}/invitations/{invitationId}',
+  config: {
+    auth: 'default',
+    async handler (request, h) {
+      try {
+        await Invitation.findByIdAndRemove(request.params.invitationId)
+        return {
+          message: 'Remove Succeed'
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  }
+}
 module.exports = [
   get, store, update, destroy,
   getMembers, storeMember, getBadges, storeBadge,
-  getInvitations, storeInvitation
+  getInvitations, storeInvitation, destroyInvitation
 ]
